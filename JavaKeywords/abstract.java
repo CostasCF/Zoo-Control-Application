@@ -20,3 +20,5 @@ public static void main(String args[]){
 	System.out.println(obj.NumberSum(1, 2));
    }
 }
+
+//test
