@@ -10,7 +10,6 @@ public class userInput {
             try {
                 num = myInput.nextInt();
         		System.out.println("Your option has been entered!Thank you!");
-        		myInput.close(); //closes scanner
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Λαθος τύπος δεδομένων, πληκτρολογήστε ακέραιο αριθμό");
@@ -23,8 +22,7 @@ public class userInput {
 
 		int userAnswer = userInput.inputValidation();
 
-	   // Menu mymenu = new Menu(); //creating a Menu's class object
-		while (userAnswer != 7){
+		while (userAnswer !=7) {
 		switch (userAnswer) {
         case 1:
         	//mymenu.showAnimals();
@@ -44,10 +42,13 @@ public class userInput {
         case 6:
         	//mymenu.deleteAnimalByCode();
             break;
-            }
+			}
 		userAnswer = userInput.inputValidation();
 		}
-	}
+		if (userAnswer == 7) {
+			System.out.println("Program stopped");
+			}
+		}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
