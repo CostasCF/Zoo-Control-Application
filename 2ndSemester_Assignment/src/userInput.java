@@ -2,10 +2,12 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 public class userInput {
+	
+	
 	public static int  inputValidation() { 
         int num;
-		Scanner myInput = new Scanner(System.in); //creating a Scanner Object
         while(true) {
+    		Scanner myInput = new Scanner(System.in); //creating a Scanner Object
     		System.out.println("Enter an option");
             try {
                 num = myInput.nextInt();
@@ -18,6 +20,8 @@ public class userInput {
         return num;
     }
 
+	
+	
 	public void input()  {
 
 		int userAnswer = userInput.inputValidation();
