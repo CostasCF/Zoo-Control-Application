@@ -2,8 +2,7 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 public class userInput {
-	userInput myUserInputObj = new userInput(); //creating an object that belongs in this class
-	public int inputValidation() { 
+	public static int  inputValidation() { 
         int num;
 		Scanner myInput = new Scanner(System.in); //creating a Scanner Object
         while(true) {
@@ -22,7 +21,7 @@ public class userInput {
 
 	public void input()  {
 
-		int userAnswer = myUserInputObj.inputValidation();
+		int userAnswer = userInput.inputValidation();
 
 	   // Menu mymenu = new Menu(); //creating a Menu's class object
 		while (userAnswer != 7){
@@ -46,7 +45,7 @@ public class userInput {
         	//mymenu.deleteAnimalByCode();
             break;
             }
-		userAnswer = myUserInputObj.inputValidation();
+		userAnswer = userInput.inputValidation();
 		}
 	}
 
@@ -54,5 +53,5 @@ public class userInput {
 		// TODO Auto-generated method stub
 
 	}
-
 }
+
