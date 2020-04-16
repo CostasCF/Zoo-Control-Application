@@ -1,4 +1,3 @@
-package com.p19057;
 
 //creating the menu of the application
 public class Menu {
@@ -6,12 +5,14 @@ public class Menu {
 		Menu menu = new Menu();
 		menu.printHeader();
 		menu.printMenu();
+		//creating an object for userInput class
+		userInput myinput = new UserInput();
+		myinput.input();
 	}
-
     public void printHeader() {
         System.out.println("+-----------------------------------+");
         System.out.println("|        Welcome   to Our           |");
-        System.out.println("|        ZOO Application           |");
+        System.out.println("|        ZOO Application            |");
         System.out.println("+-----------------------------------+");
     }
 
