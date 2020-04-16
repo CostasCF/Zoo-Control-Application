@@ -1,12 +1,13 @@
 package com.p19057;
 
+//creating the menu of the application
 public class Menu {
 	public static void main(String[] args) {
 		Menu menu = new Menu();
 		menu.printHeader();
 		menu.printMenu();
 	}
-	
+
     public void printHeader() {
         System.out.println("+-----------------------------------+");
         System.out.println("|        Welcome   to Our           |");
