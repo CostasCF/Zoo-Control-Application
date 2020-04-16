@@ -6,7 +6,7 @@ public class Menu {
 		menu.printHeader();
 		menu.printMenu();
 		//creating an object for userInput class
-		userInput myinput = new UserInput();
+		userInput myinput = new userInput();
 		myinput.input();
 	}
     public void printHeader() {
