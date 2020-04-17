@@ -2,6 +2,14 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AnimalValidationandInput {
+	
+	 
+	public boolean StringExceptionHandling(String name) {
+	        return name.matches("[a-zA-Zá-ùÁ-ÙÜ-þ¢-¿]+"); // This takes into account greek accents too
+	    }
+	
+
+
 	// Checks if the user input is type-double
     public double inputValidDouble() {
         double num;

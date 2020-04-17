@@ -3,7 +3,7 @@ import java.util.*;
 //creating the menu of the application
 public class Menu {
 	
-	static ArrayList<Animal> Catalog = new ArrayList<Animal>();
+	
 	
 	public static void main(String[] args) {
 		Menu menu = new Menu();
@@ -11,6 +11,7 @@ public class Menu {
 		menu.printMenu();
 		userInput myinput = new userInput(); //creating an object of userInput
 		myinput.input(); // calling input
+		
 		
 	}
 	
