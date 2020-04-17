@@ -14,7 +14,7 @@ public class userInput {
         		System.out.println("Your option has been entered!Thank you!");
                 break;
             } catch (InputMismatchException e) {
-                System.out.println("Λαθος τύπος δεδομένων, πληκτρολογήστε ακέραιο αριθμό");
+                System.out.println("Please enter a number ranging from 1 to 7!");
             }
         }
         return num;
@@ -38,13 +38,13 @@ public class userInput {
         	//mymenu.searchByName();
             break;
         case 4:
-        	//mymenu.searchByCode();
+        	//mymenu.searchByID();
             break;
         case 5:
-        	//mymenu.editByCode();
+        	//mymenu.editByID();
             break;
         case 6:
-        	//mymenu.deleteAnimalByCode();
+        	//mymenu.deleteByID();
             break;
 			}
 		userAnswer = userInput.inputValidation();

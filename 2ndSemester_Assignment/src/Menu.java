@@ -1,6 +1,10 @@
+import java.util.*;
 
 //creating the menu of the application
 public class Menu {
+	
+	static ArrayList<Animal> animalCatalog = new ArrayList<Animal>();
+	
 	public static void main(String[] args) {
 		Menu menu = new Menu();
 		menu.printHeader();
@@ -17,12 +21,12 @@ public class Menu {
 
     public void printMenu() {
     	System.out.println("Please make a selection");
-        System.out.println("1) Προβολή όλων των διαθεσιμων ζώων του ζωολογικού κήπου");
-        System.out.println("2) Προσθήκη νέου ζώου");
-        System.out.println("3) Αναζήτηση ζώου βάσει ονόματος");
-        System.out.println("4) Αναζήτηση ζώου βάσει κωδικού");
-        System.out.println("5) Επεξεργασία ζώου βάσει κωδικού");
-        System.out.println("6) Διαγραφή ζώου βάσει κωδικού");
+        System.out.println("1) Show all available animals.");
+        System.out.println("2) Add a new animal.");
+        System.out.println("3) Search an animal by name.");
+        System.out.println("4) Search an animal by id.");
+        System.out.println("5) Edit an animal by id.");
+        System.out.println("6) Delete an animal by id.");
         System.out.println("7) Exit");
     }
     
