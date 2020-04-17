@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class AnimalValidationandInput {
 	
-	 
+	 // checks if the user input is string (*requires additional loop for proper validation where is needed)
 	public boolean StringExceptionHandling(String name) {
 	        return name.matches("[a-zA-Zá-ùÁ-ÙÜ-þ¢-¿]+"); // This takes into account Greek accents too
 	    }

@@ -3,7 +3,7 @@ import java.util.InputMismatchException;
 
 public class userInput {
 	
-	
+	// handling the first input the user enters which is a number between 1 to 7
 	public static int  inputValidation() { 
         int num;
         while(true) {
