@@ -6,6 +6,7 @@ public class addAnimal {
 	static ArrayList<Animal> Catalog = new ArrayList<Animal>();
 	AnimalValidationandInput av = new AnimalValidationandInput();
 	
+	//this method enters the user's animal data in a new intentity inside the ArrayList
 	public void newAnimal() {
 		System.out.println("You chose the 2nd option, please enter a new animal by adding its details one by one!");
 		System.out.println("Enter the id of the animal");

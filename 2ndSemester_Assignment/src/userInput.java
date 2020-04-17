@@ -21,7 +21,7 @@ public class userInput {
     }
 
 	
-	
+	// input method is the structure of the program
 	public void input()  {	
 		int userAnswer = userInput.inputValidation();
 		

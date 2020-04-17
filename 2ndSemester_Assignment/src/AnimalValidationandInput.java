@@ -5,7 +5,7 @@ public class AnimalValidationandInput {
 	
 	 
 	public boolean StringExceptionHandling(String name) {
-	        return name.matches("[a-zA-Zá-ùÁ-ÙÜ-ş¢-¿]+"); // This takes into account greek accents too
+	        return name.matches("[a-zA-Zá-ùÁ-ÙÜ-ş¢-¿]+"); // This takes into account Greek accents too
 	    }
 	
 
