@@ -22,17 +22,17 @@ public class userInput {
 
 	
 	
-	public void input()  {
-
+	public void input()  {	
 		int userAnswer = userInput.inputValidation();
-
+		
 		while (userAnswer !=7) {
 		switch (userAnswer) {
         case 1:
         	//mymenu.showAnimals();
             break;
         case 2:
-        	//mymenu.addAnimal();
+        	addAnimal myanimal = new addAnimal();
+        	myanimal.newAnimal();
             break;
         case 3:
         	//mymenu.searchByName();
@@ -52,7 +52,7 @@ public class userInput {
 		if (userAnswer == 7) {
 			System.out.println("Program stopped");
 			}
-		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
