@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class addAnimal extends Menu{ //κληρονομει απο το μενου την δημιουργια του πινακα
+public class addAnimal extends Menu{ //inherits from menu class the major creation of the ArrayList
 	int id;
 	String name;
 	String BelongClass;
@@ -13,7 +13,7 @@ public class addAnimal extends Menu{ //κληρονομει απο το μενου την δημιουργια το
 	static AnimalValidationandInput av = new AnimalValidationandInput();
 	
 	//this method enters the user's animal data in a new intetity inside the ArrayList
-	public static void newAnimal() {
+	public void newAnimal() {
 		System.out.println("You chose the 2nd option, please enter a new animal by adding its details one by one!");
 		System.out.println("Enter the id of the animal");
 		int id = av.inputValidInt();
