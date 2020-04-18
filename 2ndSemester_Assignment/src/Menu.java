@@ -2,6 +2,9 @@ import java.util.*;
 
 //creating the menu of the application
 public class Menu {
+	
+	static ArrayList<Animal> Catalog = new ArrayList<Animal>(); //creating the array
+
 	public static void main(String[] args) {
 		Menu menu = new Menu();
 		menu.printHeader();
@@ -12,7 +15,7 @@ public class Menu {
 	
     public void printHeader() {
         System.out.println("+-----------------------------------+");
-        System.out.println("|        Welcome   to Our           |");
+        System.out.println("|        Welcome  to Our            |");
         System.out.println("|        ZOO Application            |");
         System.out.println("+-----------------------------------+");
     }
