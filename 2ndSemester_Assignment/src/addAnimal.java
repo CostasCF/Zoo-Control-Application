@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class addAnimal extends Menu{
+public class addAnimal extends Menu{ //κληρονομει απο το μενου την δημιουργια του πινακα
 	int id;
 	String name;
 	String BelongClass;
@@ -17,19 +17,27 @@ public class addAnimal extends Menu{
 		System.out.println("You chose the 2nd option, please enter a new animal by adding its details one by one!");
 		System.out.println("Enter the id of the animal");
 		int id = av.inputValidInt();
+		
 		System.out.println("Enter the name of the animal.");
 		boolean flag = false;
 		String name = "" ; // handling name input
 		while (!flag) {
 			name = scan.nextLine();
 			flag = av.StringExceptionHandling(name);
+			if (flag == false) {
+				System.out.println("Please enter valid characters");
+			}
 		}
+		
 		System.out.println("Enter the biology class of the animal.");
 		flag = false;
 		String BelongClass = ""; //handling biology class input
 		while (!flag) {
-			name = scan.nextLine();
-			flag = av.StringExceptionHandling(name);
+			BelongClass = scan.nextLine();
+			flag = av.StringExceptionHandling(BelongClass);
+			if (flag == false) {
+				System.out.println("Please enter valid characters");
+			}
 		}
 		System.out.println("Enter the weight of the animal.");
 		double weight = av.inputValidDouble();
