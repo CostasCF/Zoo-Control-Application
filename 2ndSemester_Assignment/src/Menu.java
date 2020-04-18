@@ -2,17 +2,12 @@ import java.util.*;
 
 //creating the menu of the application
 public class Menu {
-	
-	
-	
 	public static void main(String[] args) {
 		Menu menu = new Menu();
 		menu.printHeader();
 		menu.printMenu();
 		userInput myinput = new userInput(); //creating an object of userInput
 		myinput.input(); // calling input
-		
-		
 	}
 	
     public void printHeader() {

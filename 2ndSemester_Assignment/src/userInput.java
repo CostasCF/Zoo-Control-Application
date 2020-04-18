@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 import java.util.InputMismatchException;
 
 public class userInput {
@@ -28,7 +29,8 @@ public class userInput {
 		while (userAnswer !=7) {
 		switch (userAnswer) {
         case 1:
-        	//mymenu.showAnimals();
+        	showAnimals showAnimals = new showAnimals();
+        	showAnimals.Show();
             break;
         case 2:
         	addAnimal myanimal = new addAnimal();
