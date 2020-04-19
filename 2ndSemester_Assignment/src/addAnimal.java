@@ -10,7 +10,6 @@ public class addAnimal extends Menu implements Serializable{ //inherits from men
 	double weight;
 	double age;
 	
-	String filename = "file.ser"; 
 	static Scanner scan = new Scanner(System.in);
 	static AnimalValidationandInput av = new AnimalValidationandInput();
 	
@@ -53,8 +52,8 @@ public class addAnimal extends Menu implements Serializable{ //inherits from men
 				try
 				{    
 					//Saving of object in a file 
-					FileOutputStream file = new FileOutputStream(filename); 
-					ObjectOutputStream out = new ObjectOutputStream(file); 
+					 FileOutputStream file = new FileOutputStream(filename); 
+					 ObjectOutputStream out = new ObjectOutputStream(file); 
 					  
 					// Method for serialization of object 
 					out.writeObject(Catalog); 

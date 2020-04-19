@@ -8,7 +8,6 @@ public class showAnimals extends addAnimal  implements Serializable {
 	
 	@SuppressWarnings("unchecked")
 	public void Show() {
-		addAnimal animal = null; 
 		 // Deserialization 
 		 try
 		 {    
