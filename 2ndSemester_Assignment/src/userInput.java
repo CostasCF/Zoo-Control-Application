@@ -37,12 +37,13 @@ public class userInput {
         	addAnimal myanimal = new addAnimal();
         	myanimal.newAnimal();
             break;
-        case 3:
+        case 3: 
         	searchbyName mysearch = new searchbyName();
         	mysearch.ByName();
             break;
         case 4:
-        	//mymenu.searchByID();
+        	searchbyID myIDsearch = new searchbyID();
+        	myIDsearch.ByID();
             break;
         case 5:
         	//mymenu.editByID();
@@ -58,7 +59,7 @@ public class userInput {
 			}
 	}
 	
-	 // checks if the user input is string (*requires additional loop for proper validation where is needed)
+	  //checks if the user input is string (*requires additional loop for proper validation where is needed)
 		public static boolean StringExceptionHandling(String name) {
 		        return name.matches("[a-zA-Zá-ùÁ-ÙÜ-þ¢-¿]+"); // This takes into account Greek accents too
 		    }
