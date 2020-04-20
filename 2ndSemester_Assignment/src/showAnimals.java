@@ -5,6 +5,7 @@ public class showAnimals extends addAnimal implements java.io.Serializable {
 
 	
 	public void Show() {
+		LoadingProgress();
 		int Arraysize = Catalog.size();
 		int i = 0;
 		while (i < Arraysize) {

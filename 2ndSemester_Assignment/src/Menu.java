@@ -13,8 +13,6 @@ public class Menu implements java.io.Serializable {
 		menu.printHeader();
 		menu.printMenu();
 		userInput myinput = new userInput(); //creating an object of userInput
-		//reading the data so the compiler stays updated and doesn't overwrite the older data with new ones when option 2 is called first
-		LoadingProgress();
 		myinput.input(); // calling input
 		   
 	}
@@ -51,7 +49,7 @@ public class Menu implements java.io.Serializable {
 			out.close(); 
 			file.close(); 
 
-			System.out.println("Object has been serialized"); 
+			System.out.println("File has been saved."); 
 
 		} catch(IOException ex) 
 		{ 
@@ -69,7 +67,7 @@ public class Menu implements java.io.Serializable {
 			 ObjectInputStream in = new ObjectInputStream(file); 
 			 // Method for deserialization of object 
 			 Catalog = (ArrayList)in.readObject(); 
-			 System.out.println("File has been loaded ");
+			 System.out.println("File has been loaded.");
 
 			 in.close();
 			 }

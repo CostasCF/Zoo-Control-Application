@@ -61,6 +61,7 @@ public class editbyID extends searchbyID{
 	             break;
 	         case 6:
 	             returnToMenu = true;
+	             SavingProgress();
 	             break;
 			 }
 		}
