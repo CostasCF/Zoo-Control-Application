@@ -1,46 +1,15 @@
-import java.util.ArrayList;
-import java.io.*; 
-
-
-
-public class showAnimals extends addAnimal implements Serializable {
+public class showAnimals extends addAnimal{
 
 	
-	@SuppressWarnings("unchecked")
 	public void Show() {
-		 // Deserialization  
-		 try
-		 {    
-			 // Reading the object from a file 
-			 FileInputStream file = new FileInputStream(filename); 
-			 ObjectInputStream in = new ObjectInputStream(file); 
-			   
-			 // Method for deserialization of object 
-			 Catalog = (ArrayList)in.readObject(); 
-
-			   
-			 System.out.println("Object has been deserialized ");
-			 int Arraysize = Catalog.size(); 
-				int i = 0;
-				while (i < Arraysize) {
-					Catalog.get(i).PrintA();
-					i++; }
-			 in.close(); 
-			 file.close(); 
-
-			 }
-		  catch(IOException ex) 
-			 { 
-				 System.out.println("IOException is caught"); 
-			 } 
-	        catch(ClassNotFoundException ex) 
-	        { 
-	            System.out.println("ClassNotFoundException is caught"); 
-	        } 
-	  
+		 int Arraysize = Catalog.size(); 
+			int i = 0;
+			while (i < Arraysize) {
+				Catalog.get(i).PrintA();
+				i++; }
 	}
 	
-	public  void PrintA() {
+	public void PrintA() {
 		System.out.println("-----------------------------------------");
 		System.out.println(" ID of the animal:" + id);               
 		System.out.println(" Name:" + name);

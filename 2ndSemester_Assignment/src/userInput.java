@@ -1,8 +1,10 @@
 import java.util.Scanner;
-
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.InputMismatchException;
 
-public class userInput {
+public class userInput extends Menu {
 	Scanner scan = new Scanner(System.in);
 
 	// handling the first input the user enters which is a number between 1 to 7
@@ -54,8 +56,30 @@ public class userInput {
             break;
 			}
 		userAnswer = userInput.inputValidation();
-		}
+		} 
 		if (userAnswer == 7) {
+	        // Serialization  
+			try
+			{    
+				//Saving of object in a file 
+				 FileOutputStream file = new FileOutputStream(filename); 
+				 ObjectOutputStream out = new ObjectOutputStream(file); 
+				  
+				// Method for serialization of object 
+				out.writeObject(Catalog); 
+				  
+				out.close(); 
+				file.close(); 
+				  
+				System.out.println("Object has been serialized"); 
+	  
+			} 
+			  
+			catch(IOException ex) 
+			{ 
+				System.out.println("IOException is caught"); 
+			} 
+	  
 			System.out.println("Program stopped");
 			}
 	}
@@ -66,7 +90,7 @@ public class userInput {
 		    }
 		
 
-
+ 
 		// Checks if the user input is type-double
 	    public double inputValidDouble() {
 	        double num;

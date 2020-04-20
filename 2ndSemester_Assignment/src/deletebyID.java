@@ -22,7 +22,6 @@ public class deletebyID extends showAnimals{
 		} 
 		
 		if (flag == true) {
-			System.out.println(position);
 			Catalog.remove(position); 
 			System.out.println("Your animal has been deleted successfully.");
 

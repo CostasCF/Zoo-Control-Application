@@ -1,14 +1,12 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.*; 
 
-public class addAnimal extends Menu implements Serializable{ //inherits from menu class the major creation of the ArrayList
+public class addAnimal extends Menu{ //inherits from menu class the major creation of the ArrayList
 
 	int id;
 	String name;
 	String BelongClass;
 	double weight;
-	double age;
+	double age; 
 	
 	static Scanner scan = new Scanner(System.in);
 	static userInput av = new userInput();
@@ -48,28 +46,7 @@ public class addAnimal extends Menu implements Serializable{ //inherits from men
 		double age = av.inputValidDouble();
 		Animal animal = new Animal(id, name, BelongClass, weight, age);
 		Catalog.add(animal);
-		        // Serialization  
-				try
-				{    
-					//Saving of object in a file 
-					 FileOutputStream file = new FileOutputStream(filename); 
-					 ObjectOutputStream out = new ObjectOutputStream(file); 
-					  
-					// Method for serialization of object 
-					out.writeObject(Catalog); 
-					  
-					out.close(); 
-					file.close(); 
-					  
-					System.out.println("Object has been serialized"); 
-		  
-				} 
-				  
-				catch(IOException ex) 
-				{ 
-					System.out.println("IOException is caught"); 
-				} 
-		  
+
 	}
 	
 
