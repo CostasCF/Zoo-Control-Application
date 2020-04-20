@@ -1,12 +1,8 @@
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*; 
 import java.util.*;
 
 //creating the menu of the application
-public class Menu {
+public class Menu implements java.io.Serializable {
 	
 	//initiation of everything
 	static String filename = "file.ser"; 
@@ -18,7 +14,7 @@ public class Menu {
 		menu.printMenu();
 		userInput myinput = new userInput(); //creating an object of userInput
 		//reading the data so the compiler stays updated and doesn't overwrite the older data with new ones when option 2 is called first
-		//LoadingProgress();
+		LoadingProgress();
 		myinput.input(); // calling input
 		   
 	}
@@ -57,9 +53,7 @@ public class Menu {
 
 			System.out.println("Object has been serialized"); 
 
-		} 
-
-		catch(IOException ex) 
+		} catch(IOException ex) 
 		{ 
 			System.out.println("IOException is caught"); 
 		} 
@@ -76,6 +70,8 @@ public class Menu {
 			 // Method for deserialization of object 
 			 Catalog = (ArrayList)in.readObject(); 
 			 System.out.println("File has been loaded ");
+
+			 in.close();
 			 }
 		  catch(IOException ex) 
 			 { 

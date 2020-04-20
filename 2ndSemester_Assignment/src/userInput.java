@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.InputMismatchException;
 
-public class userInput extends Menu {
+public class userInput extends Menu implements java.io.Serializable  {
 	Scanner scan = new Scanner(System.in);
 
 	// handling the first input the user enters which is a number between 1 to 7
@@ -66,7 +66,7 @@ public class userInput extends Menu {
 	
 	  //checks if the user input is string (*requires additional loop for proper validation where is needed)
 		public static boolean StringExceptionHandling(String name) {
-		        return name.matches("[a-zA-Zá-ùÁ-ÙÜ-þ¢-¿]+"); // This takes into account Greek accents too
+		        return name.matches("[a-zA-Zï¿½-ï¿½ï¿½-ï¿½ï¿½-ï¿½ï¿½-ï¿½]+"); // This takes into account Greek accents too
 		    }
 		
 

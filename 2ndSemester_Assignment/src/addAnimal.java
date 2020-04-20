@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.*; 
 
-public class addAnimal extends Menu{ //inherits from menu class the major creation of the ArrayList
+public class addAnimal extends Menu implements java.io.Serializable { //inherits from menu class the major creation of the ArrayList
 
 	int id;
 	String name;
