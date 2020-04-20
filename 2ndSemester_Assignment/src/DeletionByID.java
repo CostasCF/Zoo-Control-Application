@@ -1,9 +1,9 @@
-public class searchbyID extends showAnimals{
+public class DeletionByID extends ShowAnimals{
 
-	userInput input = new userInput();
-	
-	void ByID() {
-		System.out.println("Please enter the ID of the animal.");
+	UserDataInput input = new UserDataInput();
+		 
+	void deletingbyID() {
+		System.out.println("Please enter the ID of the animal you want to delete.");
 		int lead = input.inputValidInt(); //this is a serialized search
 		boolean flag = false;
 		int position = 0;
@@ -16,14 +16,21 @@ public class searchbyID extends showAnimals{
 			}else {
 				i++;
 				}
-		} 
+		}  
+		
 		if (flag == true) {
-			System.out.println("Your animal has been found.");
-			Catalog.get(position).PrintA();
+			Catalog.remove(position); 
+			System.out.println("Your animal has been deleted successfully.");
+			SavingProgress();
+
 
 			
 		}else {
 			System.out.println("Your animal has NOT been found. If your animal doesn't exist, you can select option number 2.");
 		}
 	}
+	
+
+	
 }
+

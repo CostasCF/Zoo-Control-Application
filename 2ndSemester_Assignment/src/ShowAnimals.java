@@ -1,19 +1,19 @@
 import java.util.ArrayList;
 import java.io.*; 
 
-public class showAnimals extends addAnimal implements java.io.Serializable {
+public class ShowAnimals extends AddAnimal implements java.io.Serializable {
 
 	
-	public void Show() {
+	public void printingArrayList() {
 		LoadingProgress();
 		int Arraysize = Catalog.size();
 		int i = 0;
 		while (i < Arraysize) {
-			Catalog.get(i).PrintA();
+			Catalog.get(i).printingArrayObjects();
 			i++; }
 	}
 	
-	public void PrintA() {
+	public void printingArrayObjects() {
 		System.out.println("-----------------------------------------");
 		System.out.println(" 1. ID of the animal:" + id);               
 		System.out.println(" 2. Name:" + name);

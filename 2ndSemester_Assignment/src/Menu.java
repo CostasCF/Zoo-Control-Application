@@ -6,14 +6,14 @@ public class Menu implements java.io.Serializable {
 	
 	//initiation of everything
 	static String filename = "file.ser"; 
-	static ArrayList<Animal> Catalog = new ArrayList<Animal>(); //creating the array
+	static ArrayList<AnimalArray> Catalog = new ArrayList<AnimalArray>(); //creating the array
 
 	public static void main(String[] args) {
 		Menu menu = new Menu();
 		menu.printHeader();
 		menu.printMenu();
-		userInput myinput = new userInput(); //creating an object of userInput
-		myinput.input(); // calling input
+		UserDataInput myinput = new UserDataInput(); //creating an object of userInput
+		myinput.structure(); // calling input
 		   
 	}
 	

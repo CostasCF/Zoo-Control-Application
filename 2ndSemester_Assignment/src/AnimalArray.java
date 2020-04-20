@@ -1,8 +1,8 @@
-public class Animal extends showAnimals { //inherits the initiation of the variables that
+public class AnimalArray extends ShowAnimals { //inherits the initiation of the variables that
 
 
 	//building the constructor in order to initiate the variables of the ArrayList
-	public Animal(int id, String name, String BelongClass, double weight, double age) {
+	public AnimalArray(int id, String name, String BelongClass, double weight, double age) {
 
 		this.id = id;
 		this.name = name;

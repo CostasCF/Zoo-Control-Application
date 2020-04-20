@@ -1,12 +1,11 @@
 
-public class searchbyName extends showAnimals {
+public class SearchbyName extends ShowAnimals {
 	
-	Animal animal = new Animal(id, name, BelongClass, weight, age);
-	userInput input = new userInput();
+	UserDataInput myinput = new UserDataInput();
 	
-	void ByName() {
+	void searchingbyName() {
 		System.out.println("Enter the name of the animal you want to search for.");
-		String lead = input.getName(); //this is a serialized search
+		String lead = myinput.inputValidString(); //this is a serialized search
 		boolean flag = false;
 		int position = 0;
 		int i = 0;
@@ -21,7 +20,7 @@ public class searchbyName extends showAnimals {
 		}  
 		if (flag == true) {
 			System.out.println("Your animal has been found.");
-			Catalog.get(position).PrintA();
+			Catalog.get(position).printingArrayObjects();
 		}else {
 			System.out.println("Your animal has NOT been found. If your animal doesn't exist, you can select option number 2.");
 		}
