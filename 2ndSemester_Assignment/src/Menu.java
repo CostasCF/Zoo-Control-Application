@@ -1,6 +1,8 @@
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.*;
 
 //creating the menu of the application
@@ -15,28 +17,9 @@ public class Menu {
 		menu.printHeader();
 		menu.printMenu();
 		userInput myinput = new userInput(); //creating an object of userInput
-		
 		//reading the data so the compiler stays updated and doesn't overwrite the older data with new ones when option 2 is called first
-		 try
-		 {     
-			 // Reading the object from a file 
-			 FileInputStream file = new FileInputStream(filename); 
-			 ObjectInputStream in = new ObjectInputStream(file);    
-			 // Method for deserialization of object 
-			 Catalog = (ArrayList)in.readObject(); 
-
-			 }
-		  catch(IOException ex) 
-			 { 
-				 System.out.println("IOException is caught"); 
-			 } 
-	      catch(ClassNotFoundException ex) 
-	        { 
-	            System.out.println("ClassNotFoundException is caught"); 
-	        } 
-
-	   
-		 myinput.input(); // calling input
+		//LoadingProgress();
+		myinput.input(); // calling input
 		   
 	}
 	
@@ -56,6 +39,54 @@ public class Menu {
         System.out.println("5) Edit an animal by id.");
         System.out.println("6) Delete an animal by id.");
         System.out.println("7) Exit");
+    }
+    
+    public static  void SavingProgress() {
+        // Serialization  
+		try
+		{    
+			//Saving of object in a file 
+			FileOutputStream file = new FileOutputStream(filename); 
+			ObjectOutputStream out = new ObjectOutputStream(file); 
+
+			// Method for serialization of object 
+			out.writeObject(Catalog); 
+
+			out.close(); 
+			file.close(); 
+
+			System.out.println("Object has been serialized"); 
+
+		} 
+
+		catch(IOException ex) 
+		{ 
+			System.out.println("IOException is caught"); 
+		} 
+
+    }
+    
+    public static void LoadingProgress() {
+   	 // Deserialization  
+		 try
+		 {    
+			 // Reading the object from a file 
+			 FileInputStream file = new FileInputStream(filename); 
+			 ObjectInputStream in = new ObjectInputStream(file); 
+			 // Method for deserialization of object 
+			 Catalog = (ArrayList)in.readObject(); 
+			 System.out.println("File has been loaded ");
+			 }
+		  catch(IOException ex) 
+			 { 
+				 System.out.println("IOException is caught"); 
+			 } 
+	        catch(ClassNotFoundException ex) 
+	        { 
+	            System.out.println("ClassNotFoundException is caught"); 
+	        } 
+
+    	
     }
     
 

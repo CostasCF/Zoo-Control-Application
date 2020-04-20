@@ -1,11 +1,8 @@
 public class deletebyID extends showAnimals{
 
 	userInput input = new userInput();
-	
-	//public void clear(int x) {
-	//}
 		 
-	void ByID() {
+	void deletionByID() {
 		System.out.println("Please enter the ID of the animal you want to delete.");
 		int lead = input.inputValidInt(); //this is a serialized search
 		boolean flag = false;
@@ -19,7 +16,7 @@ public class deletebyID extends showAnimals{
 			}else {
 				i++;
 				}
-		} 
+		}  
 		
 		if (flag == true) {
 			Catalog.remove(position); 

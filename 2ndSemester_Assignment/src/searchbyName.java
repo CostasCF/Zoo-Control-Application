@@ -5,6 +5,7 @@ public class searchbyName extends showAnimals {
 	userInput input = new userInput();
 	
 	void ByName() {
+		System.out.println("Enter the name of the animal you want to search for.");
 		String lead = input.getName(); //this is a serialized search
 		boolean flag = false;
 		int position = 0;
@@ -17,12 +18,10 @@ public class searchbyName extends showAnimals {
 			}else {
 				i++;
 				}
-		} 
+		}  
 		if (flag == true) {
 			System.out.println("Your animal has been found.");
-			Catalog.get(position).PrintA(); 
-
-			
+			Catalog.get(position).PrintA();
 		}else {
 			System.out.println("Your animal has NOT been found. If your animal doesn't exist, you can select option number 2.");
 		}

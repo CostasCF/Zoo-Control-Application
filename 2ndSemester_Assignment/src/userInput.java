@@ -48,40 +48,20 @@ public class userInput extends Menu {
         	myIDsearch.ByID();
             break; 
         case 5:
-        	//mymenu.editByID();
+        	editbyID myEdit = new editbyID();
+        	myEdit.editID();
             break;
         case 6:
         	deletebyID mydeletion = new deletebyID();
-        	mydeletion.ByID();
+        	mydeletion.deletionByID();
             break;
 			}
 		userAnswer = userInput.inputValidation();
 		} 
 		if (userAnswer == 7) {
-	        // Serialization  
-			try
-			{    
-				//Saving of object in a file 
-				 FileOutputStream file = new FileOutputStream(filename); 
-				 ObjectOutputStream out = new ObjectOutputStream(file); 
-				  
-				// Method for serialization of object 
-				out.writeObject(Catalog); 
-				  
-				out.close(); 
-				file.close(); 
-				  
-				System.out.println("Object has been serialized"); 
-	  
-			} 
-			  
-			catch(IOException ex) 
-			{ 
-				System.out.println("IOException is caught"); 
-			} 
-	  
-			System.out.println("Program stopped");
-			}
+			System.out.println("Program ended");
+		}
+			
 	}
 	
 	  //checks if the user input is string (*requires additional loop for proper validation where is needed)
@@ -125,7 +105,6 @@ public class userInput extends Menu {
 	    public String getName() {
 	    	boolean flag;
 	    	String name;
-			System.out.println("Enter the name of the animal.");
 			flag = false;
 			name = ""; //handling name input
 			while (!flag) { 

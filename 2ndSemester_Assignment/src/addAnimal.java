@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.*; 
 
 public class addAnimal extends Menu{ //inherits from menu class the major creation of the ArrayList
 
@@ -46,7 +48,7 @@ public class addAnimal extends Menu{ //inherits from menu class the major creati
 		double age = av.inputValidDouble();
 		Animal animal = new Animal(id, name, BelongClass, weight, age);
 		Catalog.add(animal);
-
+		SavingProgress();
 	}
 	
 
