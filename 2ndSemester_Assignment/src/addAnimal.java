@@ -11,7 +11,7 @@ public class addAnimal extends Menu implements Serializable{ //inherits from men
 	double age;
 	
 	static Scanner scan = new Scanner(System.in);
-	static AnimalValidationandInput av = new AnimalValidationandInput();
+	static userInput av = new userInput();
 	
 	//this method enters the user's animal data in a new intetity inside the ArrayList
 	public void newAnimal() {

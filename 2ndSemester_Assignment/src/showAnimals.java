@@ -3,7 +3,7 @@ import java.io.*;
 
 
 
-public class showAnimals extends addAnimal  implements Serializable {
+public class showAnimals extends addAnimal implements Serializable {
 
 	
 	@SuppressWarnings("unchecked")
@@ -20,7 +20,7 @@ public class showAnimals extends addAnimal  implements Serializable {
 
 			   
 			 System.out.println("Object has been deserialized ");
-			 int Arraysize = Catalog.size();
+			 int Arraysize = Catalog.size(); 
 				int i = 0;
 				while (i < Arraysize) {
 					Catalog.get(i).PrintA();
@@ -40,7 +40,7 @@ public class showAnimals extends addAnimal  implements Serializable {
 	  
 	}
 	
-	public void PrintA() {
+	public  void PrintA() {
 		System.out.println("-----------------------------------------");
 		System.out.println(" ID of the animal:" + id);               
 		System.out.println(" Name:" + name);

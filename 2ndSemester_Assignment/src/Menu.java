@@ -6,6 +6,7 @@ import java.util.*;
 //creating the menu of the application
 public class Menu {
 	
+	//initiation of everything
 	static String filename = "file.ser"; 
 	static ArrayList<Animal> Catalog = new ArrayList<Animal>(); //creating the array
 
@@ -14,7 +15,6 @@ public class Menu {
 		menu.printHeader();
 		menu.printMenu();
 		userInput myinput = new userInput(); //creating an object of userInput
-		
 		
 		//reading the data so the compiler stays updated and doesn't overwrite the older data with new ones when option 2 is called first
 		 try
