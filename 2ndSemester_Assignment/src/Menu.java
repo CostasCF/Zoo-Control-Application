@@ -2,29 +2,27 @@ import java.io.*;
 import java.util.*;
 
 //creating the menu of the application
-public class Menu implements java.io.Serializable {
+public class Menu extends UserDataInput implements java.io.Serializable {
 	
 	//initiation of everything
 	static String filename = "file.ser"; 
 	static ArrayList<AnimalArray> Catalog = new ArrayList<AnimalArray>(); //creating the array
 
 	public static void main(String[] args) {
-		Menu menu = new Menu();
-		menu.printHeader();
-		menu.printMenu();
-		UserDataInput myinput = new UserDataInput(); //creating an object of userInput
-		myinput.structure(); // calling input
+		printHeader();
+		printMenu();
+		structure(); // calling structure method which includes user's input
 		   
 	}
 	
-    public void printHeader() {
+    public static void printHeader() {
         System.out.println("+-----------------------------------+");
         System.out.println("|        Welcome  to Our            |");
         System.out.println("|        ZOO Application            |");
         System.out.println("+-----------------------------------+");
     }
 
-    public void printMenu() {
+    public static void printMenu() {
     	System.out.println("Please make a selection");
         System.out.println("1) Show all available animals.");
         System.out.println("2) Add a new animal.");
@@ -33,9 +31,9 @@ public class Menu implements java.io.Serializable {
         System.out.println("5) Edit an animal by id.");
         System.out.println("6) Delete an animal by id.");
         System.out.println("7) Exit");
-    }
+    } 
     
-    public static  void SavingProgress() {
+    public static void SavingProgress() {
         // Serialization  
 		try
 		{    

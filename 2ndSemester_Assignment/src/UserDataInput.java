@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.InputMismatchException;
 
-public class UserDataInput extends Menu implements java.io.Serializable  {
+public class UserDataInput {
 	
 	Scanner scan = new Scanner(System.in);
 	// input method is the structure of the program
-	public void structure()  {	
+	public static void structure()  {	
 		int userAnswer = inputValidInt();
 		System.out.println("Your option has been entered!Thank you!");
 		while (userAnswer !=7) {
@@ -63,7 +63,7 @@ public class UserDataInput extends Menu implements java.io.Serializable  {
 	    }
 
 	    // Checks if the user's input is integer
-	    public int inputValidInt() { //
+	    public static int inputValidInt() { //
 	        int num;
 	        while(true) {
 	            Scanner input = new Scanner(System.in);
