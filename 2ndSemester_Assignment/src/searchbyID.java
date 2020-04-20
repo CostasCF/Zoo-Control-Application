@@ -1,6 +1,5 @@
 public class searchbyID extends showAnimals{
 
-	Animal animal = new Animal(id, name, BelongClass, weight, age);
 	userInput input = new userInput();
 	
 	void ByID() {

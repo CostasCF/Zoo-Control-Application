@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Animal extends showAnimals { //inherits the initiation of the variables that
 
 

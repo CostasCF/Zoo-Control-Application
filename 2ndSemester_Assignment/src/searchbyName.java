@@ -20,7 +20,7 @@ public class searchbyName extends showAnimals {
 		} 
 		if (flag == true) {
 			System.out.println("Your animal has been found.");
-			Catalog.get(position).PrintA();
+			Catalog.get(position).PrintA(); 
 
 			
 		}else {

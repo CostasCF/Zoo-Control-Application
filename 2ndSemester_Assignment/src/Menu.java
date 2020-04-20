@@ -18,7 +18,7 @@ public class Menu {
 		
 		//reading the data so the compiler stays updated and doesn't overwrite the older data with new ones when option 2 is called first
 		 try
-		 {    
+		 {     
 			 // Reading the object from a file 
 			 FileInputStream file = new FileInputStream(filename); 
 			 ObjectInputStream in = new ObjectInputStream(file);    
@@ -34,6 +34,7 @@ public class Menu {
 	        { 
 	            System.out.println("ClassNotFoundException is caught"); 
 	        } 
+
 	   
 		 myinput.input(); // calling input
 		   
