@@ -11,7 +11,7 @@ public class searchbyID extends showAnimals{
 		int i = 0;
 		int max = Catalog.size();
 		while (i < max && flag == false) {
-			if (Catalog.get(i).id == lead ) {  //if name of the catalog = the name the user searched for
+			if (Catalog.get(i).id == lead ) {  //if id of the catalog = the id the user searched for
 				flag = true;
 				position = i;
 			}else {
@@ -20,7 +20,7 @@ public class searchbyID extends showAnimals{
 		} 
 		if (flag == true) {
 			System.out.println("Your animal has been found.");
-			Catalog.get(i).PrintA();
+			Catalog.get(position).PrintA();
 
 			
 		}else {

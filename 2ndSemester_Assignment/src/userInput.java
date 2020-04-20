@@ -44,12 +44,13 @@ public class userInput {
         case 4:
         	searchbyID myIDsearch = new searchbyID();
         	myIDsearch.ByID();
-            break;
+            break; 
         case 5:
         	//mymenu.editByID();
             break;
         case 6:
-        	//mymenu.deleteByID();
+        	deletebyID mydeletion = new deletebyID();
+        	mydeletion.ByID();
             break;
 			}
 		userAnswer = userInput.inputValidation();
