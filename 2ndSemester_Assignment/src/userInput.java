@@ -12,7 +12,7 @@ public class userInput extends Menu implements java.io.Serializable  {
         int num;
         while(true) {
     		Scanner myInput = new Scanner(System.in); //creating a Scanner Object
-    		System.out.println("Enter an option");
+    		System.out.println("Select an option between 1 to 7.");
             try {
                 num = myInput.nextInt();
         		System.out.println("Your option has been entered!Thank you!");
