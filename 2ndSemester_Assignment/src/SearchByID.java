@@ -1,4 +1,4 @@
-public class SearchByID extends ShowAnimals{
+public class SearchByID extends Menu{
 
 	UserDataInput input = new UserDataInput();
 	
@@ -14,7 +14,7 @@ public class SearchByID extends ShowAnimals{
 				flag = true;
 				position = i;
 			}else {
-				i++;
+				i++; 
 				}
 		} 
 		if (flag == true) {

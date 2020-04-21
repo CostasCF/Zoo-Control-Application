@@ -2,11 +2,17 @@ import java.io.*;
 import java.util.*;
 
 //creating the menu of the application
-public class Menu extends UserDataInput implements java.io.Serializable {
+public class Menu extends UserDataInput implements java.io.Serializable { //inherits from UserDataInput all the input's methods
 	
-	//initiation of everything
-	static String filename = "file.ser"; 
-	static ArrayList<AnimalArray> Catalog = new ArrayList<AnimalArray>(); //creating the array
+	// ArrayList's variables initiation
+	int id;
+	String name;
+	String BelongClass;
+	double weight;
+	double age; 
+
+	static String filename = "file.ser";  //creating the data file
+	static ArrayList<AnimalArray> Catalog = new ArrayList<AnimalArray>(); //creating the ArrayList
 
 	public static void main(String[] args) {
 		printHeader();
@@ -80,6 +86,5 @@ public class Menu extends UserDataInput implements java.io.Serializable {
 
     	
     }
-    
 
 }

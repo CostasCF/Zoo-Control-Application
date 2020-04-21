@@ -1,10 +1,8 @@
-public class DeletionByID extends ShowAnimals{
-
-	UserDataInput input = new UserDataInput();
+public class DeletionByID extends Menu{
 		 
-	void deletingbyID() {
+	void deletingbyID() { 
 		System.out.println("Please enter the ID of the animal you want to delete.");
-		int lead = input.inputValidInt(); //this is a serialized search
+		int lead = inputValidInt(); //this is a serialized search
 		boolean flag = false;
 		int position = 0;
 		int i = 0;

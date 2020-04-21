@@ -1,5 +1,5 @@
 
-public class SearchbyName extends ShowAnimals {
+public class SearchByName extends Menu {
 	
 	UserDataInput myinput = new UserDataInput();
 	

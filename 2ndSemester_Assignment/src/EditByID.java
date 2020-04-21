@@ -1,9 +1,9 @@
 
-public class EditByID extends SearchByID{
+public class EditByID extends Menu{
 	
 	public void editingbyID() {
 		System.out.println("Please enter the ID of the animal you want to edit.");
-		int lead = input.inputValidInt(); //this is a serialized search
+		int lead = inputValidInt(); //this is a serialized search
 		boolean flag = false;
 		int position = 0;
 		int i = 0;
@@ -28,35 +28,35 @@ public class EditByID extends SearchByID{
 			boolean returnToMenu = false;
 			while (returnToMenu == false) { 
 			System.out.println("Please select the number you want to edit. Select number 6 if you want to quit editing.");
-			int choice = input.inputValidInt();
+			int choice = inputValidInt();
 			 switch (choice) {
 	         case 1:
 	             System.out.println("Please enter the new animal id.");
-	             int newID = input.inputValidInt();
+	             int newID = inputValidInt();
 	             Catalog.get(position).id = newID;
 	             System.out.println("Successfully edited!");
 	             break;
 	         case 2:
 	             System.out.println("Please enter the new animal name.");
-	             String newName = input.inputValidString();
+	             String newName = inputValidString();
 	             Catalog.get(position).name = newName;
 	             System.out.println("Successfully edited!");
 	             break;
 	         case 3:
 	             System.out.println("Please enter the new biology class of the animal.");
-	             String newBelongClass = input.inputValidString(); 
+	             String newBelongClass = inputValidString(); 
 	             Catalog.get(position).BelongClass = newBelongClass;
 	             System.out.println("Successfully edited!");
 	             break;
 	         case 4:
 	             System.out.println("Please enter the new average weight of the animal.");
-	             double newWeight = input.inputValidDouble();
+	             double newWeight = inputValidDouble();
 	             Catalog.get(position).weight = newWeight;
 	             System.out.println("Successfully edited!");
 	             break;
 	         case 5:
 	             System.out.println("Please enter the new maximum age of the animal.");
-	             double newAge = input.inputValidDouble();
+	             double newAge = inputValidDouble();
 	             Catalog.get(position).age = newAge;
 	             System.out.println("Successfully edited!");
 	             break;

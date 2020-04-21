@@ -1,4 +1,4 @@
-public class AnimalArray extends ShowAnimals { //inherits the initiation of the variables that
+public class AnimalArray extends Menu { //inherits from Menu class the initiation of the variables
 
 
 	//building the constructor in order to initiate the variables of the ArrayList
@@ -9,15 +9,18 @@ public class AnimalArray extends ShowAnimals { //inherits the initiation of the 
 		this.BelongClass = BelongClass;
 		this.weight = weight;
 		this.age = age;
+
 	}
+	public void printingArrayObjects() {
+		System.out.println("-----------------------------------------");
+		System.out.println(" 1. ID of the animal:" + id);               
+		System.out.println(" 2. Name:" + name);
+		System.out.println(" 3. Biology Class:" + BelongClass ); 
+		System.out.println(" 4. Avg weight:"+ weight + "kg");
+		System.out.println(" 5. Max life span:" + age);
+		System.out.println("-----------------------------------------");
+	}
+
+
 }
 
-
-/* class inheritance in order from the "Superclass" to "LowerClass"
- * Menu 
- * addAnimal (inherits the creation of the ArrayList Catalog)
- * showAnimals (inherits the initiation of the variables used by the ArrayList)
- * Animal (inherits the initiation of the variables used by the ArrayList)
- */
-	
-	

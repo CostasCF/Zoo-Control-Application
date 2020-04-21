@@ -9,10 +9,10 @@ public class UserDataInput {
 	Scanner scan = new Scanner(System.in);
 	// input method is the structure of the program
 	public static void structure()  {	
-		int userAnswer = inputValidInt();
+		int myinput = inputValidInt();
 		System.out.println("Your option has been entered!Thank you!");
-		while (userAnswer !=7) {
-		switch (userAnswer) {
+		while (myinput !=7) {
+		switch (myinput) {
         case 1:
         	ShowAnimals showAnimals = new ShowAnimals();
         	showAnimals.printingArrayList();
@@ -22,7 +22,7 @@ public class UserDataInput {
         	myanimal.newAnimal();
             break;
         case 3: 
-        	SearchbyName mysearch = new SearchbyName();
+        	SearchByName mysearch = new SearchByName();
         	mysearch.searchingbyName();
             break;
         case 4:
@@ -38,10 +38,10 @@ public class UserDataInput {
         	mydeletion.deletingbyID();
             break;
 			}
-		userAnswer = inputValidInt();
+		myinput = inputValidInt();
 		System.out.println("Your option has been entered!Thank you!");
 		} 
-		if (userAnswer == 7) {
+		if (myinput == 7) {
 			System.out.println("Program ended");
 		}
 			
@@ -94,4 +94,18 @@ public class UserDataInput {
 	    }
 
 }
+
+/*								 		A diagram of the classes' heredity
+ * 											UserDataInput (SuperClass)
+ * 													|
+ * 												  Menu (subclass)
+ * 													|
+ * AddAnimal	ShowAnimals		AnimalArray		SearchByID	  SearchByName	  EditByID	  DeletionByID
+ * 
+ */
+
+
+
+
+
 
