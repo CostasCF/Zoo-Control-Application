@@ -38,6 +38,7 @@ public class UserDataInput {
         	mydeletion.deletingbyID();
             break;
 			}
+		System.out.println("Enter an option.");
 		myinput = inputValidInt();
 		System.out.println("Your option has been entered!Thank you!");
 		} 

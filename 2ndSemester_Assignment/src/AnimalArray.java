@@ -16,8 +16,8 @@ public class AnimalArray extends Menu { //inherits from Menu class the initiatio
 		System.out.println(" 1. ID of the animal:" + id);               
 		System.out.println(" 2. Name:" + name);
 		System.out.println(" 3. Biology Class:" + BelongClass ); 
-		System.out.println(" 4. Avg weight:"+ weight + "kg");
-		System.out.println(" 5. Max life span:" + age);
+		System.out.println(" 4. Average weight:"+ weight + "kg");
+		System.out.println(" 5. Max life span:" + age + "years");
 		System.out.println("-----------------------------------------");
 	}
 

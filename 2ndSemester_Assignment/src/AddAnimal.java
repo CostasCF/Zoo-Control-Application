@@ -17,10 +17,10 @@ public class AddAnimal extends Menu implements java.io.Serializable {
 		System.out.println("Enter the biology class of the new animal.");
 		BelongClass = inputValidString();
 		//--------weight input--------------------------------------------------------
-		System.out.println("Enter the weight of the new animal.");
+		System.out.println("Enter the average weight of the new animal.");
 		double weight = inputValidDouble();
 		//-------- age input--------------------------------------------------------
-		System.out.println("Enter the age of the new animal.");
+		System.out.println("Enter the lifespan of the new animal.");
 		double age = inputValidDouble();
 		AnimalArray animal = new AnimalArray(id, name, BelongClass, weight, age);
 		Catalog.add(animal);
