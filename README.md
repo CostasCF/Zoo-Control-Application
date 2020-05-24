@@ -1,2 +1,4 @@
-# Java
-Just a testing enviroment for learning the fundamentals of java programming language.
+------------------------------------------------------------------------------------------------------------------------------------------
+This repository includes an zoo control application as a second's semester assignment. More details on the specific folder.
+------------------------------------------------------------------------------------------------------------------------------------------
+
