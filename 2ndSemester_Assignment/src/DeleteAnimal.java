@@ -1,14 +1,20 @@
-public class DeletionByID extends Menu{
-		 
-	void deletingbyID() { 
+public class DeleteAnimal extends Animals {
+
+	/**
+	 * Deletes an animal by a given ID
+	 */
+	public void deleteAnimalByID() {
+		OpenData();
 		System.out.println("Please enter the ID of the animal you want to delete.");
-		int lead = inputValidInt(); //this is a serialized search
+		//this is a serialized search
+		int animalID = inputValidInt();
 		boolean flag = false;
 		int position = 0;
 		int i = 0;
 		int max = Catalog.size();
-		while (i < max && flag == false) {
-			if (Catalog.get(i).id == lead ) {  //if id of the catalog = the id the user searched for
+		while (i < max && !flag) {
+			//if id of the catalog = the id the user searched for
+			if (Catalog.get(i).id == animalID ) {
 				flag = true;
 				position = i;
 			}else {
@@ -16,19 +22,14 @@ public class DeletionByID extends Menu{
 				}
 		}  
 		
-		if (flag == true) {
-			Catalog.remove(position); 
+		if (flag) {
+			Catalog.remove(position);
 			System.out.println("Your animal has been deleted successfully.");
-			SavingProgress();
-
-
-			
+			SaveData(Catalog);
 		}else {
 			System.out.println("Your animal has NOT been found. If your animal doesn't exist, you can select option number 2.");
 		}
 	}
-	
-
 	
 }
 

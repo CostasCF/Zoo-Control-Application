@@ -1,15 +1,14 @@
-import java.util.ArrayList;
-import java.io.*; 
+public class ShowAnimals extends Animals implements java.io.Serializable {
 
-public class ShowAnimals extends Menu implements java.io.Serializable { 
-
-	
-	public void printingArrayList() {
-		LoadingProgress();
+	/**
+	 * Prints the Catalog which contains the animals
+	 */
+	public void printCatalog() {
+		OpenData();
 		int Arraysize = Catalog.size();
 		int i = 0;
 		while (i < Arraysize) {
-			Catalog.get(i).printingArrayObjects();
+			Catalog.get(i).printAnimalElements();
 			i++; }
 	}
 
